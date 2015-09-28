@@ -1,0 +1,23 @@
+{
+  "name": "oz-md-pagination",
+  "version": "1.0.0",
+  "homepage": "https://github.com/e-oz/oz-md-pagination",
+  "authors": [
+    "OZ <normandiggs@gmail.com>"
+  ],
+  "description": "Pagination directive for Angular Material",
+  "main": "pagination.js",
+  "keywords": [
+    "material",
+    "angular",
+    "pagination"
+  ],
+  "license": "Apache-2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
