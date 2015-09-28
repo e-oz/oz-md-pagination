@@ -4,7 +4,7 @@ angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
     restrict: 'E',
     template: '<div layout="row">' +
     '<md-button flex="10" ng-click="prev()"><span class="ion-arrow-left-b"></span></md-button>' +
-    '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" ng-class="cssClass"></md-slider>' +
+    '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" ng-class="sliderClass"></md-slider>' +
     '<md-button flex="10" ng-click="next()"><span class="ion-arrow-right-b"></span></md-button>' +
     '</div>',
     scope: {
@@ -12,7 +12,7 @@ angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
       min: '@',
       max: '@',
       step: '@',
-      cssClass: '@'
+      sliderClass: '@'
     },
     link: function (scope) {
       scope.next = function () {
