@@ -2,7 +2,7 @@
 Pagination directive for AngularMaterial
 
 #Live example 
-[http://codepen.io/evgeniyoz/pen/meRbMy?editors=101](CodePen)
+[CodePen](http://codepen.io/evgeniyoz/pen/meRbMy?editors=101)
 
 #Code Example  
 ```
