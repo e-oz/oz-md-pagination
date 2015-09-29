@@ -5,7 +5,7 @@ angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
     template: '<div layout="row">' +
     '<md-button flex="10" ng-click="prev()" aria-label="Previous"><span ng-class="leftIcon"></span></md-button>' +
     '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" aria-label="Pages slider" ng-class="sliderClass"></md-slider>' +
-    '<md-button flex="10" ng-click="next()" arial-label="Next"><span ng-class="rightIcon"></span></md-button>' +
+    '<md-button flex="10" ng-click="next()" aria-label="Next"><span ng-class="rightIcon"></span></md-button>' +
     '</div>',
     scope: {
       ngModel: '=',
