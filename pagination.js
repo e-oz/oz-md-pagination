@@ -4,7 +4,8 @@ angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
     restrict: 'E',
     template: '<div layout="row">' +
     '<md-button type="button" flex="10" ng-click="prev()" aria-label="Previous"><span ng-class="leftIcon"></span></md-button>' +
-    '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" aria-label="Pages slider" ng-class="sliderClass"></md-slider>' +
+    '<span style="position: absolute; text-align: center; font-size: 0.85rem; width: 50%; margin-left: 20px;" ng-show="step && max && textOf && textRecords">{{(ngModel+1)}}-{{(ngModel+(step-0))}} {{textOf}} {{max-step}} {{textRecords}}</span>' +
+    '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" step="1" aria-label="Pages slider" ng-class="sliderClass"></md-slider>' +
     '<md-button type="button" flex="10" ng-click="next()" aria-label="Next"><span ng-class="rightIcon"></span></md-button>' +
     '</div>',
     scope: {
@@ -14,9 +15,17 @@ angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
       step: '@',
       sliderClass: '@',
       leftIcon: '@',
-      rightIcon: '@'
+      rightIcon: '@',
+      textOf: '@',
+      textRecords: '@'
     },
     link: function (scope) {
+      if (!scope.textOf) {
+        scope.textOf = 'of';
+      }
+      if (!scope.textRecords) {
+        scope.textRecords = 'records';
+      }
       scope.leftIcon = scope.leftIcon || 'ion-arrow-left-b';
       scope.rightIcon = scope.rightIcon || 'ion-arrow-right-b';
       scope.next = function () {
