@@ -2,9 +2,9 @@
 angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
   return {
     restrict: 'E',
-    template: '<div layout="row">' +
+    template: '<div layout="row" style="position: relative">' +
     '<md-button type="button" flex="10" ng-click="prev()" aria-label="Previous"><span ng-class="leftIcon"></span></md-button>' +
-    '<span style="position: absolute; text-align: center; font-size: 0.85rem; width: 50%; margin-left: 20px;" ng-show="step && max && textOf && textRecords">{{(ngModel+1)}}-{{(ngModel+(step-0))}} {{textOf}} {{max-step}} {{textRecords}}</span>' +
+    '<span style="position: absolute; text-align: center; font-size: 0.75rem; right: 10%; left: 10%; margin-top: 5px;" ng-show="step && max && textOf && textRecords">{{(ngModel+1)}}-{{(ngModel+(step-0))}} {{textOf}} {{max-step}} {{textRecords}}</span>' +
     '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" step="1" aria-label="Pages slider" ng-class="sliderClass"></md-slider>' +
     '<md-button type="button" flex="10" ng-click="next()" aria-label="Next"><span ng-class="rightIcon"></span></md-button>' +
     '</div>',
