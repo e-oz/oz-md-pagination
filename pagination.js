@@ -3,10 +3,10 @@ angular.module('oz.mdPagination', []).directive('ozMdPagination', function () {
   return {
     restrict: 'E',
     template: '<div layout="row" style="position: relative">' +
-    '<md-button type="button" flex="10" ng-click="prev()" aria-label="Previous"><span ng-class="leftIcon"></span></md-button>' +
+    '<md-button type="button" flex="5" ng-click="prev()" aria-label="Previous" style="min-width: 25px;"><span ng-class="leftIcon"></span></md-button>' +
     '<span style="position: absolute; text-align: center; font-size: 0.75rem; right: 10%; left: 10%; margin-top: 5px;" ng-show="step && max && textOf && textRecords">{{((ngModel-0)+1)}}-{{((ngModel-0)+(step-0))}} {{textOf}} {{(max-0)+(step-0)}} {{textRecords}}</span>' +
     '<md-slider flex ng-model="ngModel" min="{{min}}" max="{{max}}" step="1" aria-label="Pages slider" ng-class="sliderClass"></md-slider>' +
-    '<md-button type="button" flex="10" ng-click="next()" aria-label="Next"><span ng-class="rightIcon"></span></md-button>' +
+    '<md-button type="button" flex="5" ng-click="next()" aria-label="Next" style="min-width: 25px;"><span ng-class="rightIcon"></span></md-button>' +
     '</div>',
     scope: {
       ngModel: '=',
